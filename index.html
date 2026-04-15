@@ -3,47 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LeadKnight — Smart CRM, AI Sales & Business OS</title>
+    <title>LeadKnight Pro — AI CRM & Business OS</title>
     <meta
       name="description"
-      content="LeadKnight is a modern AI-powered CRM and Business OS for leads, deals, automation, analytics, and team growth."
+      content="LeadKnight Pro is a modern AI-powered CRM and Business OS with lead management, automation, analytics, team control, and business growth tools."
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- =========================
-         BACKGROUND EFFECTS
-    ========================== -->
-    <div class="bg-blur blur-one"></div>
-    <div class="bg-blur blur-two"></div>
-    <div class="grid-overlay"></div>
+    <!-- PRELOADER -->
+    <div id="preloader">
+      <div class="loader-ring"></div>
+      <h2>LeadKnight</h2>
+      <p>Loading Pro Experience...</p>
+    </div>
 
-    <!-- =========================
-         HEADER / NAVBAR
-    ========================== -->
+    <!-- CURSOR -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- BACKGROUND CANVAS -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- BACK TO TOP -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- HEADER -->
     <header class="site-header" id="top">
       <div class="container navbar">
         <a href="#top" class="brand">
           <div class="brand-mark">LK</div>
           <div class="brand-text">
             <span class="brand-title">LeadKnight</span>
-            <span class="brand-subtitle">Business OS</span>
+            <span class="brand-subtitle">Pro Business OS</span>
           </div>
         </a>
 
-        <nav class="nav-links" id="navLinks">
+        <nav class="nav-links" id="desktopNav">
           <a href="#features">Features</a>
           <a href="#platform">Platform</a>
-          <a href="#properties">Solutions</a>
+          <a href="#solutions">Solutions</a>
           <a href="#pricing">Pricing</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
         </nav>
 
         <div class="nav-actions">
-          <a href="#pricing" class="btn btn-secondary desktop-only">Plans</a>
-          <a href="#contact" class="btn btn-primary desktop-only">Get Demo</a>
-
-          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">◐</button>
+          <a href="#contact" class="btn btn-primary desktop-only">Book Demo</a>
+          <button id="menuToggle" class="menu-toggle" aria-label="Open menu">
             <span></span>
             <span></span>
             <span></span>
@@ -54,48 +63,52 @@
       <div class="mobile-menu" id="mobileMenu">
         <a href="#features">Features</a>
         <a href="#platform">Platform</a>
-        <a href="#properties">Solutions</a>
+        <a href="#solutions">Solutions</a>
         <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
-        <a href="#contact" class="btn btn-primary mobile-btn">Get Demo</a>
+        <a href="#contact" class="btn btn-primary mobile-btn">Book Demo</a>
       </div>
     </header>
 
-    <!-- =========================
-         HERO SECTION
-    ========================== -->
+    <!-- HERO -->
     <section class="hero-section">
       <div class="container hero-grid">
         <div class="hero-content reveal">
-          <span class="tag-pill">AI Powered • CRM • Automation • SaaS Ready</span>
+          <span class="tag-pill">AI CRM • Automation • Analytics • SaaS Ready</span>
           <h1>
-            Turn Leads Into Revenue With a
-            <span class="gradient-text">Modern LeadKnight Website</span>
+            The <span class="gradient-text">Modern Growth Engine</span>
+            For Leads, Teams, Deals & Revenue
           </h1>
           <p class="hero-text">
-            Manage leads, automate follow-ups, track deals, empower teams,
-            monitor performance, and scale faster with one smart business
-            operating system built for modern sales and service businesses.
+            LeadKnight Pro helps businesses capture leads, automate follow-ups,
+            manage sales workflows, monitor teams, score opportunities with AI,
+            and convert operations into scalable growth.
           </p>
 
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Book Free Demo</a>
-            <a href="#features" class="btn btn-secondary">Explore Features</a>
+            <a href="#contact" class="btn btn-primary">Get Free Demo</a>
+            <a href="#pricing" class="btn btn-secondary">See Pricing</a>
           </div>
 
           <div class="hero-stats">
-            <div class="stat-card glass">
-              <h3 data-count="100">0</h3>
-              <p>Lead Visibility</p>
-            </div>
-            <div class="stat-card glass">
+            <article class="stat-card glass">
+              <h3 data-count="2500">0</h3>
+              <p>Leads Managed</p>
+            </article>
+            <article class="stat-card glass">
+              <h3 data-count="92">0</h3>
+              <p>Team Efficiency</p>
+            </article>
+            <article class="stat-card glass">
+              <h3 data-count="450">0</h3>
+              <p>Deals Tracked</p>
+            </article>
+            <article class="stat-card glass">
               <h3 data-count="24">0</h3>
-              <p>Automation Flow</p>
-            </div>
-            <div class="stat-card glass">
-              <h3 data-count="360">0</h3>
-              <p>Business View</p>
-            </div>
+              <p>Automation Flows</p>
+            </article>
           </div>
         </div>
 
@@ -106,25 +119,25 @@
                 <p class="dash-label">Live Command Center</p>
                 <h3>LeadKnight Dashboard</h3>
               </div>
-              <span class="status-badge">Online</span>
+              <span class="status-badge">Realtime</span>
             </div>
 
             <div class="dashboard-metrics">
               <div class="metric-box">
-                <span>Total Leads</span>
-                <strong>1,248</strong>
+                <span>New Leads</span>
+                <strong>184</strong>
               </div>
               <div class="metric-box">
-                <span>Deals Closed</span>
-                <strong>312</strong>
+                <span>AI Score</span>
+                <strong>94%</strong>
               </div>
               <div class="metric-box">
-                <span>AI Follow-ups</span>
-                <strong>894</strong>
+                <span>Team Output</span>
+                <strong>89%</strong>
               </div>
               <div class="metric-box">
-                <span>Team Performance</span>
-                <strong>92%</strong>
+                <span>Revenue Flow</span>
+                <strong>₹8.4L</strong>
               </div>
             </div>
 
@@ -135,69 +148,56 @@
               </div>
 
               <div class="pipeline-row">
-                <label>New Leads</label>
-                <div class="progress-track">
-                  <div class="progress-fill fill-one"></div>
-                </div>
+                <label>Captured Leads</label>
+                <div class="progress-track"><div class="progress-fill fill-one"></div></div>
               </div>
 
               <div class="pipeline-row">
                 <label>Qualified</label>
-                <div class="progress-track">
-                  <div class="progress-fill fill-two"></div>
-                </div>
+                <div class="progress-track"><div class="progress-fill fill-two"></div></div>
               </div>
 
               <div class="pipeline-row">
-                <label>Visits</label>
-                <div class="progress-track">
-                  <div class="progress-fill fill-three"></div>
-                </div>
+                <label>Visits Scheduled</label>
+                <div class="progress-track"><div class="progress-fill fill-three"></div></div>
               </div>
 
               <div class="pipeline-row">
                 <label>Converted</label>
-                <div class="progress-track">
-                  <div class="progress-fill fill-four"></div>
-                </div>
+                <div class="progress-track"><div class="progress-fill fill-four"></div></div>
               </div>
             </div>
 
             <div class="floating-mini-card">
-              <span>AI Score</span>
-              <strong>Hot Lead: 94%</strong>
+              <span>Smart Alert</span>
+              <strong>12 Hot Leads Need Follow-up</strong>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =========================
-         BRAND STRIP
-    ========================== -->
-    <section class="brand-strip">
-      <div class="container brand-strip-inner">
+    <!-- TRUST BAR -->
+    <section class="trust-strip">
+      <div class="container trust-inner">
         <span>Lead Management</span>
-        <span>AI Follow-ups</span>
+        <span>AI Automation</span>
         <span>Voice CRM</span>
-        <span>Automation</span>
-        <span>Analytics</span>
-        <span>Team Tracking</span>
-        <span>SaaS Ready</span>
+        <span>Team Monitoring</span>
+        <span>Smart Analytics</span>
+        <span>SaaS Architecture</span>
       </div>
     </section>
 
-    <!-- =========================
-         FEATURES SECTION
-    ========================== -->
+    <!-- FEATURES -->
     <section class="section" id="features">
       <div class="container">
         <div class="section-head reveal">
-          <span class="section-label">Core Features</span>
-          <h2>Everything You Need From Lead To Deal</h2>
+          <span class="section-label">Core Capabilities</span>
+          <h2>Built For Modern High-Performance Teams</h2>
           <p>
-            LeadKnight helps you capture, organize, nurture, automate and convert
-            leads while keeping your team aligned with real-time visibility.
+            LeadKnight Pro brings lead management, AI assistance, reporting,
+            communication workflows and business control into one premium platform.
           </p>
         </div>
 
@@ -205,86 +205,66 @@
           <article class="feature-card glass reveal">
             <div class="icon-wrap">📥</div>
             <h3>Lead Capture</h3>
-            <p>
-              Add leads manually, import data, manage inbound enquiries and keep
-              every opportunity in one structured system.
-            </p>
+            <p>Collect, import and organize every enquiry with structured fields, ownership and tracking.</p>
           </article>
 
           <article class="feature-card glass reveal">
             <div class="icon-wrap">🤖</div>
-            <h3>AI Automation</h3>
-            <p>
-              Smart follow-ups, lead prioritization, reminders and next-action
-              suggestions reduce manual work and improve response speed.
-            </p>
+            <h3>AI Workflow</h3>
+            <p>Score leads, guide actions, suggest follow-ups and accelerate response quality.</p>
           </article>
 
           <article class="feature-card glass reveal">
             <div class="icon-wrap">📞</div>
             <h3>Voice CRM</h3>
-            <p>
-              Track calls, notes, agent activity and conversation context so your
-              team works smarter with faster communication logs.
-            </p>
+            <p>Manage calls, notes, communication logs and fast agent-side updates from one place.</p>
           </article>
 
           <article class="feature-card glass reveal">
             <div class="icon-wrap">📊</div>
-            <h3>Analytics</h3>
-            <p>
-              Monitor performance across agents, leads, visits, conversion stages,
-              revenue outcomes and operational efficiency.
-            </p>
+            <h3>Live Analytics</h3>
+            <p>Track performance, revenue trends, agent output, stage movement and business activity.</p>
           </article>
 
           <article class="feature-card glass reveal">
-            <div class="icon-wrap">👥</div>
-            <h3>Multi-Role Access</h3>
-            <p>
-              Separate workflows for admin, manager, agent, telecaller, owner,
-              builder, buyer and growing teams with scalable control.
-            </p>
+            <div class="icon-wrap">🧩</div>
+            <h3>Role Based Access</h3>
+            <p>Support admins, managers, agents, telecallers, owners, buyers and scalable teams.</p>
           </article>
 
           <article class="feature-card glass reveal">
-            <div class="icon-wrap">⚙️</div>
-            <h3>SaaS Ready</h3>
-            <p>
-              Designed for scale with monetization potential, subscriptions,
-              feature tiers, productivity modules and expansion-ready architecture.
-            </p>
+            <div class="icon-wrap">⚡</div>
+            <h3>Automation Engine</h3>
+            <p>Reduce repetitive work using reminders, workflows, alerts, AI actions and smart triggers.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- =========================
-         PLATFORM SECTION
-    ========================== -->
+    <!-- PLATFORM -->
     <section class="section alt-section" id="platform">
       <div class="container platform-grid">
         <div class="platform-content reveal">
-          <span class="section-label">Unified Platform</span>
-          <h2>One Business OS For Teams, Sales, Services & Growth</h2>
+          <span class="section-label">Unified Ecosystem</span>
+          <h2>More Than A CRM — It Is A Business Operating System</h2>
           <p>
-            LeadKnight is more than a CRM. It connects lead handling, activity
-            tracking, automation, team performance, client communication and
-            business intelligence into a single powerful ecosystem.
+            LeadKnight Pro unifies lead flow, communication, visits, deals,
+            automation, performance tracking and operational intelligence so your
+            business can move from scattered work to controlled growth.
           </p>
 
           <div class="platform-points">
             <div class="point glass">
-              <h4>Smart Lead Lifecycle</h4>
-              <p>Capture → qualify → follow-up → schedule → visit → close.</p>
+              <h4>Lead Lifecycle Control</h4>
+              <p>Capture → qualify → follow-up → visit → negotiation → close.</p>
             </div>
             <div class="point glass">
-              <h4>Operational Control</h4>
-              <p>Track team actions, ownership, stage history and productivity.</p>
+              <h4>Business Visibility</h4>
+              <p>Real-time activity, ownership tracking, revenue movement and KPI monitoring.</p>
             </div>
             <div class="point glass">
-              <h4>Automation Engine</h4>
-              <p>Reduce repetitive work with reminders, actions and AI prompts.</p>
+              <h4>Scalable Future</h4>
+              <p>Ready for SaaS tiers, AI expansion, voice workflows and multi-team operations.</p>
             </div>
           </div>
         </div>
@@ -303,17 +283,14 @@
       </div>
     </section>
 
-    <!-- =========================
-         PROPERTY / SOLUTION CARDS
-    ========================== -->
-    <section class="section" id="properties">
+    <!-- SOLUTIONS -->
+    <section class="section" id="solutions">
       <div class="container">
         <div class="section-head reveal">
-          <span class="section-label">Solution Cards</span>
-          <h2>Interactive Business Solution Cards</h2>
+          <span class="section-label">Interactive Solution Cards</span>
+          <h2>Premium Hover Cards With Dynamic Motion</h2>
           <p>
-            Har card ko hover, lift, glow aur layered animation ke saath design
-            kiya gaya hai so that website premium aur dynamic feel de.
+            Har card ko hover lift, tilt motion, glow layer, gradient surface aur smooth interaction ke saath banaya gaya hai.
           </p>
         </div>
 
@@ -324,14 +301,11 @@
             </div>
             <div class="property-content">
               <h3>Lead Management Suite</h3>
-              <p>
-                Lead database, filtering, owner assignment, remarks, stages and
-                activity-based control for daily team operations.
-              </p>
+              <p>Lead database, status pipeline, ownership tracking, notes, filters and action history.</p>
               <div class="property-meta">
-                <span>Lead Tracking</span>
-                <span>Follow-up</span>
+                <span>Lead Flow</span>
                 <span>Pipeline</span>
+                <span>Tracking</span>
               </div>
               <a href="#contact" class="text-link">Request Demo →</a>
             </div>
@@ -343,14 +317,11 @@
             </div>
             <div class="property-content">
               <h3>AI Sales Assistant</h3>
-              <p>
-                Lead scoring, smart suggestions, next-step guidance, response
-                prioritization and workflow acceleration with AI assistance.
-              </p>
+              <p>Intelligent scoring, smart prompts, next-step recommendations and response acceleration.</p>
               <div class="property-meta">
                 <span>AI Score</span>
-                <span>Suggestions</span>
-                <span>Automation</span>
+                <span>Actions</span>
+                <span>Assist</span>
               </div>
               <a href="#contact" class="text-link">Request Demo →</a>
             </div>
@@ -361,14 +332,11 @@
               <div class="property-badge">Voice CRM</div>
             </div>
             <div class="property-content">
-              <h3>Communication & Calls</h3>
-              <p>
-                Call actions, voice notes, quick logging, communication history
-                and agent-side productivity for faster sales execution.
-              </p>
+              <h3>Communication Engine</h3>
+              <p>Call logs, voice notes, quick remarks, communication memory and agent productivity tools.</p>
               <div class="property-meta">
-                <span>Call Logs</span>
-                <span>Voice Notes</span>
+                <span>Calls</span>
+                <span>Notes</span>
                 <span>History</span>
               </div>
               <a href="#contact" class="text-link">Request Demo →</a>
@@ -380,14 +348,11 @@
               <div class="property-badge">Growth OS</div>
             </div>
             <div class="property-content">
-              <h3>Analytics & Performance</h3>
-              <p>
-                Revenue visibility, team performance, closure trends, agent
-                metrics and business-level reporting in a modern interface.
-              </p>
+              <h3>Analytics & Revenue View</h3>
+              <p>Performance insights, trend visibility, team reports and decision-ready dashboards.</p>
               <div class="property-meta">
                 <span>Reports</span>
-                <span>Performance</span>
+                <span>Revenue</span>
                 <span>Insights</span>
               </div>
               <a href="#contact" class="text-link">Request Demo →</a>
@@ -397,17 +362,14 @@
       </div>
     </section>
 
-    <!-- =========================
-         HOW IT WORKS
-    ========================== -->
+    <!-- WORKFLOW -->
     <section class="section alt-section">
       <div class="container">
         <div class="section-head reveal">
           <span class="section-label">Workflow</span>
-          <h2>How LeadKnight Works</h2>
+          <h2>How The System Works</h2>
           <p>
-            Structured flow ensures no lead gets lost and every business action
-            stays connected from entry to conversion.
+            Structured journey ensures no lead is lost and every stage remains measurable.
           </p>
         </div>
 
@@ -415,77 +377,77 @@
           <div class="step-card glass reveal">
             <span class="step-no">01</span>
             <h3>Capture</h3>
-            <p>Add enquiries, import leads or collect from multiple sources.</p>
+            <p>Collect inbound leads from calls, web forms, referrals and manual entries.</p>
           </div>
           <div class="step-card glass reveal">
             <span class="step-no">02</span>
-            <h3>Organize</h3>
-            <p>Assign agents, classify stages and store activity history.</p>
+            <h3>Assign</h3>
+            <p>Map the right owner, prioritize opportunities and organize workflow clearly.</p>
           </div>
           <div class="step-card glass reveal">
             <span class="step-no">03</span>
             <h3>Automate</h3>
-            <p>Use AI and reminders to move faster and stay consistent.</p>
+            <p>Use AI suggestions, reminders and activity-based nudges for better execution.</p>
           </div>
           <div class="step-card glass reveal">
             <span class="step-no">04</span>
             <h3>Convert</h3>
-            <p>Track visits, deals, performance and business outcomes.</p>
+            <p>Track visits, deals, closures, performance and revenue outcomes in one place.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =========================
-         PRICING
-    ========================== -->
+    <!-- PRICING -->
     <section class="section" id="pricing">
       <div class="container">
         <div class="section-head reveal">
-          <span class="section-label">Pricing Preview</span>
-          <h2>Flexible Plans For Growing Teams</h2>
-          <p>
-            Start simple and upgrade as your business grows with more automation,
-            roles, analytics and AI support.
-          </p>
+          <span class="section-label">Pricing</span>
+          <h2>Flexible Plans For Every Growth Stage</h2>
+          <p>Switch between monthly and yearly to preview pricing layout.</p>
+        </div>
+
+        <div class="pricing-toggle reveal">
+          <button class="toggle-option active" data-plan="monthly">Monthly</button>
+          <button class="toggle-option" data-plan="yearly">Yearly</button>
         </div>
 
         <div class="pricing-grid">
           <article class="pricing-card glass reveal">
             <p class="plan-tag">Starter</p>
             <h3>Basic</h3>
-            <div class="price">₹999<span>/month</span></div>
+            <div class="price" data-monthly="999" data-yearly="8999">₹999<span>/month</span></div>
             <ul>
-              <li>Lead entry & management</li>
+              <li>Lead entry & lead list</li>
               <li>Basic dashboard</li>
-              <li>Lead remarks & status</li>
-              <li>Single team workflow</li>
+              <li>Remarks & status tracking</li>
+              <li>Single workflow management</li>
             </ul>
-            <a href="#contact" class="btn btn-secondary full-btn">Choose Plan</a>
+            <a href="#contact" class="btn btn-secondary full-btn">Choose Basic</a>
           </article>
 
           <article class="pricing-card glass featured-plan reveal">
             <p class="plan-tag">Most Popular</p>
             <h3>Growth</h3>
-            <div class="price">₹2,499<span>/month</span></div>
+            <div class="price" data-monthly="2499" data-yearly="23999">₹2,499<span>/month</span></div>
             <ul>
-              <li>Advanced pipeline</li>
-              <li>Team roles & performance</li>
-              <li>AI follow-up support</li>
-              <li>Analytics + visit tracking</li>
+              <li>Team roles & advanced pipeline</li>
+              <li>AI follow-up guidance</li>
+              <li>Visit and stage monitoring</li>
+              <li>Analytics + agent performance</li>
             </ul>
-            <a href="#contact" class="btn btn-primary full-btn">Choose Plan</a>
+            <a href="#contact" class="btn btn-primary full-btn">Choose Growth</a>
           </article>
 
           <article class="pricing-card glass reveal">
             <p class="plan-tag">Scale</p>
             <h3>Enterprise</h3>
-            <div class="price">Custom<span>/month</span></div>
+            <div class="price" data-monthly="4999" data-yearly="47999">₹4,999<span>/month</span></div>
             <ul>
-              <li>Multi-tenant SaaS direction</li>
-              <li>AI automation engine</li>
+              <li>Multi-team control</li>
               <li>Voice CRM workflows</li>
-              <li>Advanced business control</li>
+              <li>Advanced automation engine</li>
+              <li>SaaS and expansion direction</li>
             </ul>
             <a href="#contact" class="btn btn-secondary full-btn">Contact Sales</a>
           </article>
@@ -493,18 +455,126 @@
       </div>
     </section>
 
-    <!-- =========================
-         CONTACT / CTA
-    ========================== -->
+    <!-- TESTIMONIALS -->
+    <section class="section alt-section" id="testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">What Clients Say</span>
+          <h2>Trusted By Growth-Focused Teams</h2>
+          <p>Modern interface, better lead control and improved follow-up discipline.</p>
+        </div>
+
+        <div class="testimonial-slider reveal">
+          <button class="slider-btn" id="prevTestimonial" aria-label="Previous testimonial">‹</button>
+
+          <div class="testimonial-track" id="testimonialTrack">
+            <article class="testimonial-card glass active">
+              <p>
+                “LeadKnight helped us organize our lead process properly. Team follow-up quality improved immediately.”
+              </p>
+              <h4>Rohit Sharma</h4>
+              <span>Sales Manager</span>
+            </article>
+
+            <article class="testimonial-card glass">
+              <p>
+                “The dashboard feels premium and the workflow is much more practical than scattered spreadsheets.”
+              </p>
+              <h4>Anjali Verma</h4>
+              <span>Business Owner</span>
+            </article>
+
+            <article class="testimonial-card glass">
+              <p>
+                “The AI direction and performance view make it easier to identify which leads deserve faster attention.”
+              </p>
+              <h4>Sameer Khan</h4>
+              <span>Growth Consultant</span>
+            </article>
+          </div>
+
+          <button class="slider-btn" id="nextTestimonial" aria-label="Next testimonial">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">FAQ</span>
+          <h2>Common Questions</h2>
+          <p>Quick answers about setup, roles, AI capabilities and business usage.</p>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item glass reveal">
+            <button class="faq-question">
+              <span>What type of business can use LeadKnight?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                LeadKnight works for lead-driven businesses that need enquiry management, follow-up workflows, team tracking and revenue visibility.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item glass reveal">
+            <button class="faq-question">
+              <span>Does it support multiple roles?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. It is designed around admins, managers, agents, telecallers and extended multi-user team structures.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item glass reveal">
+            <button class="faq-question">
+              <span>Can AI help in follow-up management?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. AI can help prioritize leads, guide next actions, suggest workflow steps and improve response quality.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item glass reveal">
+            <button class="faq-question">
+              <span>Is this ready for future SaaS scaling?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. The positioning and structure are ready for future SaaS packaging, plan tiers, add-ons and advanced modules.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section class="section cta-section" id="contact">
       <div class="container cta-grid">
         <div class="cta-content reveal">
           <span class="section-label">Get Started</span>
-          <h2>Build Your Sales System With LeadKnight</h2>
+          <h2>Launch Your Smart Business Workflow</h2>
           <p>
-            Ready to launch a smarter lead and business workflow? Send your
-            details and start building with a modern AI-powered CRM experience.
+            Share your business details and get started with a premium AI-powered
+            CRM and operating system experience built for growth.
           </p>
+
+          <div class="cta-badges">
+            <span>Fast Setup</span>
+            <span>Modern UI</span>
+            <span>Scalable Structure</span>
+          </div>
         </div>
 
         <form class="contact-form glass reveal" id="contactForm">
@@ -520,23 +590,18 @@
 
           <textarea
             id="message"
-            placeholder="Tell us about your business needs..."
             rows="5"
+            placeholder="Tell us your requirements..."
             required
           ></textarea>
 
-          <button type="submit" class="btn btn-primary full-btn">
-            Submit Enquiry
-          </button>
-
+          <button type="submit" class="btn btn-primary full-btn">Submit Enquiry</button>
           <p class="form-message" id="formMessage"></p>
         </form>
       </div>
     </section>
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
@@ -548,8 +613,7 @@
             </div>
           </div>
           <p class="footer-text">
-            Modern lead management, team workflow, automation and analytics for
-            fast-growing businesses.
+            Smart lead systems, automation, AI assistance and operational growth for modern businesses.
           </p>
         </div>
 
@@ -559,24 +623,24 @@
             <a href="#features">Features</a>
             <a href="#platform">Platform</a>
             <a href="#pricing">Pricing</a>
-            <a href="#contact">Contact</a>
+            <a href="#faq">FAQ</a>
           </div>
         </div>
 
         <div>
           <h4>Modules</h4>
           <div class="footer-links">
-            <a href="#properties">Lead CRM</a>
-            <a href="#properties">AI Assistant</a>
-            <a href="#properties">Voice CRM</a>
-            <a href="#properties">Analytics</a>
+            <a href="#solutions">Lead CRM</a>
+            <a href="#solutions">AI Layer</a>
+            <a href="#solutions">Voice CRM</a>
+            <a href="#solutions">Analytics</a>
           </div>
         </div>
       </div>
 
       <div class="container footer-bottom">
-        <p>© 2026 LeadKnight. All rights reserved.</p>
-        <a href="#top" class="scroll-top">Back to Top ↑</a>
+        <p>© 2026 LeadKnight Pro. All rights reserved.</p>
+        <a href="#top" class="scroll-top">Back to top ↑</a>
       </div>
     </footer>
 
